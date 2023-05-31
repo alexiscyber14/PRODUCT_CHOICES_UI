@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Sazona online store</title>
+    <meta name="author" content="Alexander Ssenyondo">
+</head>
+<body>
+    <main>
+        <h1 class="price">200</h1>
+        <div class="size-container">
+            <p class="sizes">Sizes, quantity and colors options:</p>
+            <div class="sizes-wrapper">
+
+                <div class="size-btn-qty">
+                    <button data-size="XX" class="lead-btn ">XX</button>
+                    <span class="size-price">200</span>
+                    qty<input type="number" id="quantity-{{rs.size.size_name}}" class="qty" name="quantity" value="1" min="1" max="10" step="1">
+                    clrs
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:red"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:green"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:orange"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:blue"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:pink"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:rgb(46, 23, 23)"></button>
+                </div>
+                <div class="size-btn-qty">
+                    <button data-size="L" class="lead-btn">L</button>
+                    <span class="size-price">400</span>
+                    qty<input type="number" id="quantity-{{rs.size.size_name}}" class="qty" name="quantity" value="1" min="1" max="10" step="1">
+                    clrs
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:red"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:green"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:orange"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:blue"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:pink"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:rgb(46, 23, 23)"></button>
+                </div>
+               
+                <div class="size-btn-qty">
+                    <button data-size="XXXL" class="lead-btn">XXXL</button>
+                    <span class="size-price">600</span>
+                    qty<input type="number" id="quantity-{{rs.size.size_name}}" class="qty" name="quantity" value="1" min="1" max="10" step="1">
+                    clrs
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:red"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:green"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:orange"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:blue"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:pink"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:rgb(46, 23, 23)"></button>
+                </div>
+                <div class="size-btn-qty">
+                    <button data-size="M" class="lead-btn">M</button>
+                    <span class="size-price">280</span>
+                    qty<input type="number" id="quantity-{{rs.size.size_name}}" class="qty" name="quantity" value="1" min="1" max="10" step="1">
+                    clrs
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:red"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:green"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:orange"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:blue"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:pink"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:rgb(46, 23, 23)"></button>
+                </div>
+                <div class="size-btn-qty">
+                    <button data-size="XXL" class="lead-btn">XXL</button>
+                    <span class="size-price">360</span>
+                    qty<input type="number" id="quantity-{{rs.size.size_name}}" class="qty" name="quantity" value="1" min="1" max="10" step="1">
+                    clrs
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:red"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:green"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:orange"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:blue"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:pink"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:rgb(46, 23, 23)"></button>
+                </div>
+                <div class="size-btn-qty">
+                    <button data-size="SM" class="lead-btn">SM</button>
+                    <span class="size-price">590</span>
+                    qty<input type="number" id="quantity-{{rs.size.size_name}}" class="qty" name="quantity" value="1" min="1" max="10" step="1">
+                    clrs
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:red"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:green"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:orange"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:blue"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:pink"></button>
+                    <button class="colored" data-color="{{rs.colors.name}}" style="width:20px; background-color:rgb(46, 23, 23)"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
