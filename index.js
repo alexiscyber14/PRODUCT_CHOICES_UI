@@ -28,6 +28,7 @@ sizeContainers.forEach((container, index) => {
   sizeButton.addEventListener('click', () => {
     sizeButton.classList.toggle('active-size');
     selectedSizesPrices[index] = sizeButton.classList.contains('active-size') ? sizePrice : 0;
+
     updatePrice();
   });
 });
@@ -45,6 +46,26 @@ sizeContainers.forEach((container) => {
     const activeSizes = document.querySelectorAll('.size-btn-qty .lead-btn.active-size');
     if (activeSizes.length === 0) {
       initialPriceElement.textContent = initPrice.toFixed(2);
+    }
+  });
+});
+
+const colorButtons = document.querySelectorAll('.colored');
+colorButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const inputQty = button.parentNode.querySelector('input[name="quantity"]');
+    if (inputQty) {
+      const maxColorSelection = parseInt(inputQty.value);
+      const selectedColorButtons = button.parentNode.querySelectorAll('.colored.active-color');
+
+      if (selectedColorButtons.length < maxColorSelection || button.classList.contains('active-color')) {
+        // Toggle the active color state
+        button.classList.toggle('active-color');
+      } else {
+        // Deselect one of the previously selected colors
+        selectedColorButtons[0].classList.remove('active-color');
+        button.classList.add('active-color');
+      }
     }
   });
 });
