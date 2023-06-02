@@ -69,3 +69,55 @@ colorButtons.forEach((button) => {
     }
   });
 });
+
+// Create an empty array to store the selected choices
+const selectedChoices = [];
+
+// Event listener for the submit button
+const submitButton = document.getElementById('submit-btn');
+submitButton.addEventListener('click', () => {
+  const selectedSizes = [];
+
+  sizeContainers.forEach((container, index) => {
+    const sizeButton = container.querySelector('.lead-btn');
+    const sizeName = sizeButton.dataset.size;
+
+    if (sizeButton.classList.contains('active-size')) {
+      const quantity = parseInt(quantityInputs[index].value);
+      const colorButtons = container.querySelectorAll('.colored.active-color');
+      const colors = Array.from(colorButtons, (button) => button.dataset.color);
+      selectedSizes.push({ sizeName, quantity, colors });
+    }
+  });
+
+  selectedChoices.push(selectedSizes);
+  console.log(selectedChoices); // console selected
+  const selectedChoicesJSON = JSON.stringify(selectedChoices); // convert choices to json.
+  console.log('Json', selectedChoicesJSON); // see json results
+
+  const selectedChoicesContainer = document.getElementById('selected-choices-container');
+
+  function displaySelectedChoices() {
+    selectedChoicesContainer.innerHTML = ''; // Clear the container
+
+    selectedChoices.forEach((selectedSizes) => {
+      let html = '';
+
+      selectedSizes.forEach((selectedSize) => {
+        const { sizeName, quantity, colors } = selectedSize;
+
+        html += `
+        <div class="selected-size">Size: ${sizeName}</div>
+        <div class="selected-quantity">Quantity: ${quantity}</div>
+        <div class="selected-colors">Colors: ${colors.join(', ')}</div>
+        <br>
+      `;
+      });
+
+      const container = `<div class="selected-choice">${html}</div>`;
+      selectedChoicesContainer.insertAdjacentHTML('beforeend', container);
+    });
+  }
+  // Call the displaySelectedChoices function to initially display the selected choices
+  displaySelectedChoices();
+});
